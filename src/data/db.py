@@ -1,5 +1,5 @@
 from sqlmodel import create_engine, SQLModel, Session
-from models.coche import Coche
+from src.models.coche import Coche
 import os
 
 DATABASE_URL = os.environ["postgresql://coches_pri9_user:viGYhIm3EVu3hNSAvxEURVR46yYf0dCj@dpg-d65qj0ali9vc738pfcrg-a.oregon-postgres.render.com/coches_pri9"]
