@@ -1,0 +1,7 @@
+
+1 - en la carpeta del proyecto ejecutar cmd, luego docker compose build --no-cache y luego docker compose up
+
+2 - ingresar a http://localhost:8000
+
+
+

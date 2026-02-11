@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Coches</title>
+</head>
+<body>
+
+    <h1>Lista de coches</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Disponible</th>
+            <th>Fecha ingreso</th>
+            <th>Detalle</th>
+        </tr>
+
+        {% for coche in coches %}
+        <tr>
+            <td>{{ coche.id }}</td>
+            <td>{{ coche.marca }}</td>
+            <td>{{ coche.modelo }}</td>
+            <td>{{ coche.año }}</td>
+            <td>{{ coche.disponible }}</td>
+            <td>{{ coche.fecha_ingreso }}</td>
+            <td>
+                <a href="/coches/{{ coche.id }}">Ver detalle</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

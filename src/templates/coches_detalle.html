@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del coche</title>
+</head>
+<body>
+
+    <h1>Detalle del coche {{ coche.id }}</h1>
+
+    <ul>
+        <li>Marca: {{ coche.marca }}</li>
+        <li>Modelo: {{ coche.modelo }}</li>
+        <li>Año: {{ coche.año }}</li>
+        <li>Disponible: {{ coche.disponible }}</li>
+        <li>Fecha ingreso: {{ coche.fecha_ingreso }}</li>
+    </ul>
+
+    <p><a href="/coches/web">Volver a la lista</a></p>
+
+</body>
+</html>
