@@ -1,14 +1,16 @@
-from sqlmodel import create_engine, SQLModel, Session
-from src.models.coche import Coche
 import os
+from sqlmodel import create_engine, SQLModel, Session, select
+from src.models.coche import Coche
 
-DATABASE_URL = os.environ["postgresql://coches_pri9_user:viGYhIm3EVu3hNSAvxEURVR46yYf0dCj@dpg-d65qj0ali9vc738pfcrg-a.oregon-postgres.render.com/coches_pri9"]
+DATABASE_URL = os.environ["DATABASE_URL"]
 
 engine = create_engine(DATABASE_URL, echo=True, pool_pre_ping=True)
 
+ 
 def get_session():
     with Session(engine) as session:
         yield session
+
 
 def init_db():
     SQLModel.metadata.create_all(engine)
