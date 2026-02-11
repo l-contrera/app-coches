@@ -19,7 +19,7 @@ async def lifespan(app: FastAPI):
 SessionDep = Annotated[Session, Depends(get_session)]
 
 app = FastAPI(lifespan=lifespan)
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="src/templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def inicio(request: Request):
